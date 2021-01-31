@@ -81,3 +81,5 @@ QuestionWidget.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   AddResult: PropTypes.func.isRequired,
 };
+
+export default QuestionWidget;

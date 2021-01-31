@@ -37,3 +37,5 @@ const ResultsWidget = ({ results }) => {
 ResultsWidget.propTypes = {
   results: PropTypes.array.isRequired,
 };
+
+export default ResultsWidget;
