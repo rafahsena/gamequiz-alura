@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -6,11 +7,11 @@ import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizContainer from '../src/components/QuizContainer';
-import { useState } from 'react';
+import Input from '../src/components/InputBase';
+import Link from '../src/components/Link';
 
 export default function Home() {
-
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const router = useRouter();
 
   const onNameSubmit = (e) => {
@@ -30,8 +31,14 @@ export default function Home() {
             <p>{db.description}</p>
             <form onSubmit={(e) => onNameSubmit(e)}>
               <Widget.Container>
-                <Widget.Input value={name} onChange={e => setName(e.target.value)} placeholder="Diz seu nome para começar!" />
-                <Widget.Button type="submit" disabled={!name}>Jogar!</Widget.Button>
+                <Input
+                  value={name}
+                  onChange={(newName) => setName(newName)}
+                  placeholder="Diz aí seu nome pra gente!"
+                />
+                <Widget.Button type="submit" disabled={!name}>
+                  Jogar!
+                </Widget.Button>
               </Widget.Container>
             </form>
           </Widget.Content>
@@ -41,7 +48,23 @@ export default function Home() {
           <Widget.Content>
             <h1>Quizes da Galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            {db.external.map((quiz) => {
+              const [quizName, githubUser] = quiz
+                .replace(/\//g, '')
+                .replace('https:', '')
+                .replace('.vercel.app', '')
+                .split('.');
+
+              const quizUrl = `/quiz/${quizName}___${githubUser}`;
+              return (
+                <Widget.Topic
+                  as={Link}
+                  href={quizUrl}
+                >
+                  {`${githubUser}/${quizName}`}
+                </Widget.Topic>
+              );
+            })}
           </Widget.Content>
         </Widget>
         <Footer />

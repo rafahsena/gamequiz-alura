@@ -21,6 +21,24 @@ const Widget = styled.div`
   }
 `;
 
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+`;
+
 Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
@@ -65,18 +83,30 @@ Widget.Container = styled.div`
 `;
 
 Widget.Button = styled.button`
-  display: block;
-  height: 2.5rem;
-  width: 15rem;
-  font-family: 'Lato';
-  color: #fff;
-  line-height: 16px;
-  letter-spacing: 1.25px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  border: none;
+background-color: ${({ theme }) => theme.colors.secondary};
+color: ${({ theme }) => theme.colors.contrastText};
+border-radius: ${({ theme }) => theme.borderRadius};
+border: 0;
+
+width: 100%;
+padding: 10px 16px;
+font-weight: bold;
+font-size: 14px;
+line-height: 1;
+text-transform: uppercase;
+outline: 0;
+transition: .3s;
+cursor: pointer;
+
+&:hover,
+&:focus {
+  opacity: .5;
+}
+
+&:disabled {
+  background-color: #979797;
+  cursor: not-allowed;
+}
 `;
 
 export default Widget;

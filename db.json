@@ -1,33 +1,47 @@
 {
   "bg": "http://wallpaperheart.com/wp-content/uploads/2018/04/pokemon-christmas-wallpaper-pokemon-wallpaper.jpg",
-  "title": "Quiz Pokemon!",
-  "description": "Teste os seus conhecimentos sobre Pokemon e descubra quão viciado nesse universo você é!",
+  "title": "Quiz Pokémon!",
+  "description": "Teste os seus conhecimentos sobre Pokémon e descubra quão viciado nesse universo você é!",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "image": "https://media1.tenor.com/images/0f4a1b503157b3ca770ea91cae50d0cd/tenor.gif",
+      "title": "Quantas evoluções o Eevee possui?",
+      "description": "Pergunta fácil para começar!",
       "answer": 2,
-      "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
-      ]
+      "alternatives": ["4", "7", "8", "6", "9", "5"]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://i.pinimg.com/originals/25/93/7d/25937da2447594c3717a5bb2a8aade72.jpg?epik=dj0yJnU9RHlkX3hTZmJSOTFqUThZVV9wY0ROZGVsV0lwTWh2VHUmcD0wJm49U3Q1OWhRZUt5azNMY2IzdTRIUUJZdyZ0PUFBQUFBR0FYSl9J",
+      "title": "Qual desses NÃO é um tipo de Pokémon?",
+      "description": "",
+      "answer": 4,
+      "alternatives": ["Inseto", "Metal", "Grama", "Fogo", "Vento", "Fantasma"]
+    },
+    {
+      "image": "https://cdn.bulbagarden.net/upload/2/2a/RegionsMoviesMap.jpg",
+      "title": "Qual dessas é a terceira região dos jogos Pokémon?",
+      "description": "Dica: É a região dos jogos Sapphire, Ruby e Emerald.",
       "answer": 0,
-      "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
-      ]
+      "alternatives": ["Hoenn", "Kanto", "Johto", "Kalos", "Unova", "Sinnoh"]
+    },
+    {
+      "image": "https://s2.glbimg.com/f__JNXwGcK6epUehW0l7h-n6ips=/0x600/s.glbimg.com/po/tt2/f/original/2016/01/19/pokemonyellow.jpg",
+      "title": "Qual foi o primeiro jogo Pokémon em que o Pokémon seguia seu personagem?",
+      "description": "Sem dicas dessa vez!",
+      "answer": 5,
+      "alternatives": ["Red", "Black", "Sapphire", "Silver", "Blue", "Yellow"]
+    },
+    {
+      "image": "https://i.ytimg.com/vi/MNmKNhm-1Js/hqdefault.jpg",
+      "title": "Em qual ano foram lançados os primeiros jogos do Pokémon?",
+      "description": "Dica: Os primeiros jogos foram o Pokémon Red e Pokémon Green.",
+      "answer": 4,
+      "alternatives": ["2001", "1989", "1993", "1998", "1996", "2000"]
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz-marvel.omariosouto.vercel.app/",
+    "https://aluraquiz.olliveer.vercel.app/"
   ],
   "theme": {
     "colors": {
