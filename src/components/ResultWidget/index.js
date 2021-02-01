@@ -24,11 +24,6 @@ const ResultsWidget = ({ results }) => {
             </li>
           ))}
         </ul>
-        <Leaderboard>
-          <Leaderboard.Position>oi</Leaderboard.Position>
-          <Leaderboard.Position>oi</Leaderboard.Position>
-          <Leaderboard.Position>oi</Leaderboard.Position>
-        </Leaderboard>
       </Widget.Content>
     </Widget>
   );

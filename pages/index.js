@@ -59,6 +59,7 @@ export default function Home() {
               return (
                 <Widget.Topic
                   as={Link}
+                  key={quizUrl}
                   href={quizUrl}
                 >
                   {`${githubUser}/${quizName}`}
